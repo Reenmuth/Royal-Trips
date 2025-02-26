@@ -1,35 +1,100 @@
+/* Main Services Section */
 .services-section {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
     background-color: #fff;
+    font-family: 'Poppins', sans-serif;
 }
 
 .services-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2a5298; /* Color for the section title */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Grid layout for services */
 .services-grid {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap:20px;
+    flex-wrap: nowrap;
 }
 
+/* Individual Service Card */
 .service-card {
-    width: 22%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
+/* Hover effect for service cards */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Service card title styling */
 .service-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
+    color: #1e3c72; /* Dark blue color */
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
+/* Service card description text styling */
 .service-card p {
-    font-size: 16px;
-    color: #555;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 400;
+    color: #110707;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .services-section h2 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        width: 45%;
+        padding: 20px;
+    }
+
+    .services-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section h2 {
+        font-size: 24px;
+    }
+
+    .service-card {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-section h2 {
+        font-size: 20px;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 10px;
+    }
 }

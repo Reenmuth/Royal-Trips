@@ -1,0 +1,97 @@
+/* Manager Welcome Section Styling */
+.manager-welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    gap: 50px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.manager-welcome-container:hover {
+    transform: translateY(-5px);
+}
+
+
+.manager-welcome-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manager-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 2%;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manager-image:hover {
+    transform: scale(1.05); /* Image zoom effect on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.manager-welcome-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.manager-welcome-right h2 {
+    font-size: 2.5rem;
+    color: #2a5298;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* You can use a serif font to make it look elegant */
+    text-align: left;
+    line-height: 1.2;
+}
+
+.manager-welcome-right p {
+    font-size: 1.5rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-style: italic; /* Adds a touch of style */
+    font-family: 'Georgia', serif; /* Matching font with the header */
+    text-align: left;
+    transition: font-size 0.3s ease-in-out;
+}
+.manager-welcome-right p {
+    animation: typing 2s steps(30) 1;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .manager-welcome-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manager-welcome-left,
+    .manager-welcome-right {
+        text-align: center;
+    }
+
+    .manager-image {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .manager-welcome-right h2 {
+        font-size: 2rem;
+    }
+
+    .manager-welcome-right p {
+        font-size: 1.2rem;
+    }
+}

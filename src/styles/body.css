@@ -1,26 +1,147 @@
+/* Body.css */
+body {
+    /* Background gradient */
+    background: linear-gradient(to right, white, #676e7a);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-repeat: no-repeat;
+    
+    /* Text and font settings */
+    font-family: "Poppins", sans-serif; 
+    color: #fff; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+/* Video Background Section */
 .video-background {
     position: relative;
-    width: 100%;
-    height: 500px;
+    height: 70vh;
     overflow: hidden;
 }
 
 .video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 1; /* Ensure video is above other content */
 }
 
 .video-overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 2; /* Ensure overlay is above the video */
 }
 
 .video-overlay h1 {
-    font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3.5rem;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Sections */
+.aim-section,
+.services-section,
+.events-section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3; /* Ensure sections are above the video and overlay */
+}
+
+.aim-section h2,
+.services-section h2,
+.events-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.aim-section p,
+.services-section p,
+.events-section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Typing effect styles */
+.typing-effect {
+    font-size: 3rem;
+    text-align: center;
+    font-style: italic; /* Italic Text */
+    font-family: "Times New Roman", serif; /* Roman-style font */
+    color: #f8b400; /* Goldish Color */
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* font-weight: bold; */
+}
+/* Blinking Cursor */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 35px;
+    background:  #f8b400;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .typing-effect {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .video-background {
+        height: 50vh; /* Reduce more for smaller screens */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .video-overlay h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .aim-section h2,
+    .services-section h2,
+    .events-section h2 {
+        font-size: 2rem;
+    }
+
+    .aim-section p,
+    .services-section p,
+    .events-section p {
+        font-size: 1rem;
+    }
 }

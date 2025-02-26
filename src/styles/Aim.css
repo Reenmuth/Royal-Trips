@@ -1,29 +1,125 @@
-.aim-section {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
-.aim-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.aim-section p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.image-grid {
+/* Main Container */
+.aim-vision-motto-section {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
 }
 
-.image-grid img {
-    width: 30%;
+/* Left Side Container */
+.left-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 500px;
+    gap: 20px;
+}
+
+/* Top Row (Aim & Vision) */
+.top-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Content Boxes */
+.content-section {
+    flex: 1;
+    padding: 20px;
+    background: white;
     border-radius: 10px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Carousel on the Right */
+.carousel-container {
+    flex: 1;
+    max-width: 500px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .aim-vision-motto-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-container {
+        max-width: 100%;
+    }
+
+    .top-sections {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        max-width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 250px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 200px;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    .content-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .content-section p {
+        font-size: 0.85rem;
+    }
 }
